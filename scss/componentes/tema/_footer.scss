@@ -1,0 +1,43 @@
+#footer {
+    background: $black;
+}
+.footer {
+    @include Container();
+    @include stickyFooter();
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+    text-align: center;
+
+    &__licencia {
+        @include Item(100,100,50);
+
+        p {
+            text-align: left;
+            color: lighten($gray, 60%);
+            opacity: 0.3;
+        }
+
+        img {
+            width: 170px;
+        }
+    }
+
+    &__copy {
+        @include Item(100,100,50);
+        
+        p {
+            text-align: center;
+            color: lighten($gray, 60%);
+            opacity: 0.3;
+        }
+
+        a {
+            color: lighten($gray, 60%);
+            opacity: .5;
+        }
+
+        img {
+            width: 100px;
+        }
+    }
+}

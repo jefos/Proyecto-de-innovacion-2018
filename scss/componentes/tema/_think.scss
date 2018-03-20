@@ -1,0 +1,106 @@
+#think {
+    @include to(l) {
+        margin-top: 3em;
+    }
+    
+    margin-bottom: 2em;
+}
+
+.think__title {
+    @include Container();
+    text-align: center;
+    color: $gray;
+    margin-bottom: 2em;
+
+    // @include from(l) {
+    //     // margin-top: 3em;
+    // }
+
+    &__text {
+        @include Item(100,100,100);
+    }
+
+    &__content {
+        @include Item(100,100,100);
+        color: $black;
+    }
+}
+
+.think {
+    @include Container();
+
+    &__img {
+        @include Item(100,100,50);
+    }
+
+    &__details {
+        @include Item(100,100,50);
+        @include Container();
+        padding-bottom: 1em;
+        text-align: left;
+
+        &__icon {
+            @include Item(20,20,20);
+            @include to(l) {
+                margin-top: .5em;
+            }
+
+            background: $primary;
+            margin-bottom: .5em;
+            font-size: 3em;
+            text-align: center;
+            line-height: 2;
+            max-height: 100px;
+
+            i {
+                position: relative;
+                top: 10px;
+            }
+        }
+
+        &__info {
+            @include Item(80,80,80);
+
+            @include to(l) {
+                margin-top: 1em;
+            }
+
+            &__title {
+                color: $gray;
+                text-transform: uppercase;
+                font-size: 1.3em;
+                border-bottom: 1px solid $gray;
+            }
+
+            &__cont {
+                color: $black;
+                font-size: .95em;
+                font-weight: $light;
+            }
+
+            li {
+                font-size: .95em;
+                font-weight: $light;
+            }
+        }
+
+        &__extra {
+            @include Item(100,100,100);
+            @include padding(0);
+            color: $black;
+            
+            &__title {
+                font-weight: $semiBold;
+                font-size: 1.15em;
+            }
+
+            &__description {
+                // font-size: .9em;
+            }
+
+            a {
+                color: $gray;
+            }
+        }
+    }
+}

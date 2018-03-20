@@ -1,0 +1,72 @@
+@mixin flex {
+  display   : flex;
+  flex-wrap : wrap;
+}
+
+@mixin mainJustify {
+  @include flex;
+  justify-content : space-between;
+}
+
+@mixin mainDistribute {
+  @include flex;
+  justify-content : space-around;
+}
+
+@mixin mainCenter {
+  @include flex;
+  justify-content : center;
+}
+
+@mixin mainStart{
+  @include flex;
+  justify-content : flex-start;
+}
+
+@mixin mainEnd{
+  @include flex;
+  justify-content : flex-end;
+}
+
+@mixin crossStart{
+  @include flex;
+  align-items   : flex-start;
+  align-content : flex-start;
+}
+
+@mixin crossCenter {
+  @include flex;
+  align-items   : center;
+  align-content : center;
+}
+
+@mixin crossEnd {
+  @include flex;
+  align-items   : flex-end;
+  align-content : flex-end;
+}
+
+@mixin flexReverse {
+  @include flex;
+  flex-direction : row-reverse;
+}
+@mixin flexColumn {
+  @include flex;
+  flex-direction : column;
+}
+@mixin flexColumnReverse {
+  @include flex;
+  flex-direction : column-reverse;
+}
+@mixin flexCenter($child: null) {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  text-align      : center;
+
+  @if $child != null {
+    #{$child}{
+      margin : auto;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+//Importa el reset
+@import "componentes/base/reset";
+
+//Importa los variables que se utilizan en el proyecto
+@import "componentes/variables";
+
+//Importa el core del layout
+@import "componentes/layout/breackpoints";
+@import "componentes/layout/helpers";
+@import "componentes/layout/core";
+@import "componentes/layout/grid";
+@import "componentes/layout/visibility";
+@import "componentes/layout/video";
+@import "componentes/layout/flexbox";
+@import "componentes/layout/menus";
+
+
+//Importa los modulos
+//@import "componentes/modulos/";
+@import "componentes/modulos/titulos";
+
+//Importa los temas
+//@import "componentes/tema/";
+@import "componentes/tema/menu";
+@import "componentes/tema/header";
+@import "componentes/tema/about";
+@import "componentes/tema/team";
+@import "componentes/tema/projects";
+@import "componentes/tema/design";
+@import "componentes/tema/think";
+@import "componentes/tema/footer";
+@import "componentes/tema/finalproject";
+
+//importa los estados
+//@import "componentes/estados/";
+
+

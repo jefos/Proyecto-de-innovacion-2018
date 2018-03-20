@@ -1,0 +1,8 @@
+.about {
+    @include Container();
+
+    &__content {
+        text-align: center;
+        color: $gray;
+    }
+}

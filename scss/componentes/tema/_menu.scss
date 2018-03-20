@@ -1,0 +1,84 @@
+#top {
+    background: $primary;
+}
+
+.top {
+    @include Container();
+
+    &__item {
+        @include Item(100,100,100);
+        line-height: 1.5em;
+
+        p {
+            margin: 0;
+            padding: 0;
+            color: $gray;
+        }
+
+        a {
+            color: lighten($gray, 60%);
+        }
+    }
+}
+
+.main-menu {
+    @include edMenu(l);
+
+    li {
+
+        &:hover {
+            background: rgba($black, .5);
+
+            a {
+                opacity: 1;
+            }
+        }
+
+        a {
+            color: #fff;
+            opacity: .85;
+        }
+
+        ul {
+            background: rgba($black, .6);
+        }
+    }
+}
+
+.main-nav {
+    @include edNav(left, l);
+    width: 40%;
+    height: 100vh;
+    background: rgba($black, .8);
+    position: relative;
+    right: 0;
+    z-index: 999;
+    top: 4.5em;
+
+    @include from(l) {
+        background: rgba($black, .75);
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+
+}
+
+.nav-toggle {
+    @include showTo(l);
+    font-size: 2em;
+    cursor: pointer;
+    width: 100%;
+    // position: fixed;
+    top: 0;
+    background: rgba($black, .3);
+    z-index: 999;
+    color: lighten($gray, 60%);
+    height: 1.5em;
+    padding-left: $gutter;
+    padding-top: 7px;
+}
+
+.expand-submenu {
+    color: lighten($gray, 60%);
+}

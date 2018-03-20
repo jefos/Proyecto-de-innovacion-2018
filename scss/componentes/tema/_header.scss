@@ -1,0 +1,34 @@
+.main-header {
+    @include Container();
+    
+    position: relative;
+
+    &__copy {
+        @include Item(100,100,50);
+
+        &__text {
+            font-size: 1.25em;
+        }
+    }
+}
+
+#header {
+    @include crossCenter();
+    position: relative;
+    height: 100vh;
+    background: url("../img/banner.jpg") center / cover;
+
+    &:before {
+        content: "";
+        position: absolute;
+        background: rgba($primary, .7);
+        width: 50%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        @include to(l) {
+            width: 100%;
+        }
+    }
+}

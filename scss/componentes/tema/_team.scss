@@ -1,0 +1,45 @@
+.team {
+    @include Container();
+
+    &__item {
+        @include Item(100,100,50);
+        @include Container();
+
+        
+        margin-bottom: 1em;
+
+        &__img {
+            @include Item(40,40,40);
+            @include padding(0);
+        }
+
+        &__description {
+            @include Item(60,60,60);
+            background: lighten($gray, 60%);
+
+            &__name {
+                color: $primary;
+                font-weight: $semiBold;
+                font-size: 1.15em;
+            }
+
+            &__info {
+                color: $gray;
+                font-size: .95em;
+            }
+
+            &__mail {
+                color: $black;
+                font-size: .85em;
+                padding: 0;
+                margin: 0;
+            }
+
+            &__cal {
+                padding: 0;
+                // margin: 0;
+                font-size: .8em;
+            }
+        }
+    }
+}

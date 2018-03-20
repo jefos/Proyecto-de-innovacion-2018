@@ -1,0 +1,89 @@
+#design {
+    @include to(l) {
+        margin-top: 4em;
+    }
+}
+
+.design__title {
+    @include Container();
+
+    text-align: center;
+    
+    @include from(l) {
+        margin-top: 3em;
+    }
+
+    &__text {
+        @include Item(100,100,100);
+
+        h1 {
+            color: $gray;
+            text-transform: capitalize;
+
+            span {
+                color: $primary;
+            }
+        }
+    }
+
+    &__content {
+        @include Item(100,100,100);
+        color: $black;
+    }
+}
+
+.design {
+    @include Container();
+
+    &__item {
+        @include Item(100,100,50);
+        @include Container();
+        margin-bottom: 1em;
+        margin-top: 1em;
+
+        &__icon {
+            @include Item(20,20,20);
+            background: $primary;
+            margin-bottom: .3em;
+            font-size: 3em;
+            text-align: center;
+            line-height: 2;
+            max-height: 100px;
+
+            i {
+                position: relative;
+                top: 10px;
+            }
+        }
+
+        &__info {
+            @include Item(80,80,80);
+            margin-bottom: 1em;
+
+            &__title {
+                color: $gray;
+                font-weight: $semiBold;
+                text-transform: uppercase;
+                font-size: 1.2em;
+                margin-bottom: 0;
+                margin-top: 0;
+                border-bottom: 1px solid $gray;
+                display: block;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $primary;
+                }
+            }
+
+            &__details {
+                font-size: .9em;
+                color: $black;
+            }
+        }
+
+        &__img {
+            filter: grayscale(100%);
+        }
+    }
+}
